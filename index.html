@@ -1,420 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <base href=".">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AUSTech Workshop 2026">
-    <meta name="resource-type" content="document">
-    <meta name="distribution" content="global">
-    <meta name="keywords" content="Conference">
-    <link rel="shortcut icon" type="image/png" href="assets/Austech.png"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>AUSTech 2026</title>
+  <meta charset="UTF-8" />
+  <base href="." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AUSTech Workshop 2026" />
+  <meta name="resource-type" content="document" />
+  <meta name="distribution" content="global" />
+  <meta name="keywords" content="Conference" />
+  <link rel="shortcut icon" type="image/png" href="assets/Austech.png" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
+  <title>AUSTech 2026</title>
 
-        .banner {
-            position: relative;
-            width: 100%;
-        }
-
-.banner img {
-    width: 100%;
-    height: 250px; /* Adjusted to half size */
-    object-fit: cover;
-    display: block;
-}
-
-        .top-left {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 20px 30px;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 90%;
-        }
-
-        .top-left .title1 {
-            font-size: 22px;
-            font-weight: 700;
-        }
-
-        .bottom-right {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            font-size: 14px;
-            padding: 10px 15px;
-            border-radius: 8px;
-        }
-                /* Logo Strip */
-        .logo-strip {
-            width: 100%;
-            background-color: #fff;
-            text-align: center;
-            padding: 0 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo-strip img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .nav-container {
-            width: 100%;
-            background-color: #0a4d5e;
-            display: flex;
-            justify-content: center;
-        }
-
-        .navigation {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            padding: 14px 20px;
-        }
-
-        .navigation a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-            padding: 6px 12px;
-            transition: background-color 0.3s ease;
-        }
-
-        .navigation a:hover,
-        .navigation a.current {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 40px 20px;
-            background-color: #ffffff;
-        }
-
-        h2 {
-            font-size: 24px;
-            color: #0a4d5e;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        ol {
-            padding-left: 20px;
-            margin-bottom: 40px;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        strong {
-            color: #0a4d5e;
-        }
-        .logo-strip{
-  width: 100%;
-  background: #fff;
-  padding: 12px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-}
-
-.logo-strip .logo-wrap{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-strip img{
-  height: 70px;          /* controls the strip nicely */
-  width: auto;           /* keeps correct aspect */
-  max-width: 100%;       /* responsive */
-  object-fit: contain;   /* important: no cropping */
-  display: block;
-}
-
-        /* Keynote section (improved card style) */
-.keynote-section {
-    margin: 30px 0 10px;
-}
-
-.keynote-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 14px;
-}
-
-.keynote-title h2 {
-    margin: 0;
-}
-
-.keynote-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
-}
-
-.keynote-card {
-    background: linear-gradient(180deg, #f2f6fc 0%, #ffffff 100%);
-    border: 1px solid rgba(10, 77, 94, 0.15);
-    border-left: 6px solid #0a4d5e;
-    border-radius: 14px;
-    padding: 18px;
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
-}
-
-.keynote-card-inner {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 18px;
-    align-items: start;
-}
-
-.keynote-photo {
-    width: 180px;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.10);
-    background: #fff;
-}
-
-.keynote-card h3 {
-    margin: 0 0 8px;
-    color: #0a4d5e;
-    font-size: 18px;
-    line-height: 1.3;
-}
-
-.keynote-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 10px 0 14px;
-}
-
-.badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 500;
-    background: rgba(10, 77, 94, 0.10);
-    color: #0a4d5e;
-}
-
-.keynote-card p {
-    margin-bottom: 10px;
-    text-align: justify;
-}
-
-.keynote-card p:last-child {
-    margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-    .keynote-card-inner {
-        grid-template-columns: 1fr;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: "Roboto", sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Banner */
+    .banner {
+      position: relative;
+      width: 100%;
+      overflow: hidden; /* prevents overlay from spilling outside banner on mobile */
+      background: #000;
+    }
+
+    .banner img {
+      width: 100%;
+      height: clamp(260px, 45vw, 420px); /* responsive height */
+      object-fit: cover;
+      display: block;
+    }
+
+    .top-left {
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 16px 18px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: min(92%, 760px);
+    }
+
+    .top-left .title1 {
+      font-size: clamp(16px, 4.5vw, 22px);
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .bottom-right {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: clamp(12px, 3.2vw, 14px);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .top-left {
+        top: 12px;
+        padding: 12px 14px;
+      }
+    }
+
+    /* Logo Strip */
+    .logo-strip {
+      width: 100%;
+      background: #fff;
+      padding: 12px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo-strip .logo-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-strip img {
+      height: 70px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Navigation */
+    .nav-container {
+      width: 100%;
+      background-color: #0a4d5e;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 14px 20px;
+      justify-content: center;
+    }
+
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 6px 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    .navigation a:hover,
+    .navigation a.current {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+    }
+
+    @media (max-width: 480px) {
+      .navigation {
+        gap: 14px;
+        padding: 12px 12px;
+      }
+      .navigation a {
+        font-size: 16px;
+        padding: 6px 10px;
+      }
+    }
+
+    /* Main container */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: #ffffff;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #0a4d5e;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    ol {
+      padding-left: 20px;
+      margin-bottom: 40px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    strong {
+      color: #0a4d5e;
+    }
+
+    /* Keynote section (improved card style) */
+    .keynote-section {
+      margin: 30px 0 10px;
+    }
+
+    .keynote-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .keynote-title h2 {
+      margin: 0;
+    }
+
+    .keynote-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .keynote-card {
+      background: linear-gradient(180deg, #f2f6fc 0%, #ffffff 100%);
+      border: 1px solid rgba(10, 77, 94, 0.15);
+      border-left: 6px solid #0a4d5e;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+    }
+
+    .keynote-card-inner {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
     .keynote-photo {
+      width: 180px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+      background: #fff;
+    }
+
+    .keynote-card h3 {
+      margin: 0 0 8px;
+      color: #0a4d5e;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .keynote-card p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    .keynote-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .keynote-card-inner {
+        grid-template-columns: 1fr;
+      }
+      .keynote-photo {
         width: 100%;
         max-width: 260px;
+      }
     }
-}
-
-    </style>
+  </style>
 </head>
 
 <body>
+  <!-- Banner -->
+  <div class="banner">
+    <img src="underwater.jpg" alt="Conference Template Banner" />
+    <div class="top-left">
+      <div class="title1">
+        Advances in Underwater Surveillance: Technologies, Challenges and Future Directions (AUSTech 2026)
+      </div>
+    </div>
+    <div class="bottom-right">
+      ICPR 2026 <br />
+      Lyon, France
+    </div>
+  </div>
 
-    <!-- Banner -->
-    <div class="banner">
-<img src="underwater.jpg" alt="Conference Template Banner" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-        <div class="top-left">
-            <div class="title1">
-                Advances in Underwater Surveillance: Technologies, Challenges and Future Directions (AUSTech 2026)
+  <!-- Logo Strip -->
+  <div class="logo-strip">
+    <div class="logo-wrap">
+      <img src="logo_strip_updated_icpr.png" alt="Sponsors and Partners Logos" />
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav-container">
+    <div class="navigation">
+      <a class="current" href=".">Home</a>
+      <a href="Authors">Authors</a>
+      <a href="organisers">Organisers</a>
+      <a href="program">Program</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Scope of Workshop</h2>
+    <p>
+      Oceans cover 71% of the Earth's surface, yet much of the underwater domain remains unexplored.
+      Effective surveillance is essential for environmental protection, security, and industrial monitoring.
+      Core objectives include preserving marine ecosystems, monitoring fisheries, detecting aquatic diseases,
+      and preventing illegal activities. Automated systems with advanced imaging and sensors support continuous
+      coastal monitoring by identifying anomalies through audio and video data.
+    </p>
+
+    <p>
+      Underwater communication has advanced significantly, enabling data exchange between submerged vehicles,
+      sensors, and surface stations. Challenges such as signal attenuation and scattering affect both optical
+      and acoustic data quality. This workshop will explore recent developments in underwater vision, sensor fusion,
+      AI-based analytics, and communication technologies. Topics include deep learning for image enhancement,
+      generative models for data augmentation, autonomous underwater vehicles, and acoustic communication protocols.
+      The workshop aims to connect researchers and industry experts to drive innovation in underwater surveillance.
+    </p>
+
+    <br /><br />
+
+    <h2>Call for Papers</h2>
+    <p>
+      We invite original and high-quality submissions in the domain of underwater surveillance and related
+      technologies. Authors are encouraged to contribute papers that present novel research, practical
+      applications, or insightful reviews.
+    </p>
+
+    <br /><br />
+
+    <section class="keynote-section">
+      <div class="keynote-title">
+        <h2>Keynote Speakers</h2>
+      </div>
+
+      <div class="keynote-grid">
+        <!-- Keynote 1 -->
+        <div class="keynote-card">
+          <div class="keynote-card-inner">
+            <img class="keynote-photo" src="./a-zakharova.jpg" alt="Prof. Anastasia Zakharova" />
+            <div>
+              <h3>Prof. Anastasia Zakharova, La Rochelle Université, France</h3>
+              <p><strong>Title:</strong> Graph Neural Networks for MOS in Underwater Environment: An Inductive Approach.</p>
+              <p>
+                <strong>Biography:</strong> Prof. Zakharova works in graph based machine learning with a focus on
+                complex environmental data. Her recent work explores inductive graph neural models that can generalize
+                to new sensing nodes without retraining. She applies these methods to underwater monitoring where data is
+                often sparse, noisy, and expensive to collect. Her contributions support real time interpretation of
+                marine observation systems.
+              </p>
             </div>
+          </div>
         </div>
-        <div class="bottom-right">
-            ICPR 2026 <br> Lyon, France
-        </div>
-    </div>
 
-<!-- Logo Strip -->
-<div class="logo-strip">
-  <div class="logo-wrap">
-    <img src="logo_strip_updated_icpr.png" alt="Sponsors and Partners Logos">
-  </div>
-</div>
-
-
-    <!-- Navigation -->
-    <div class="nav-container">
-        <div class="navigation">
-            <a class="current" href=".">Home</a>
-            <a href="Authors">Authors</a>
-            <a href="organisers">Organisers</a>
-            <a href="program">Program</a>
-        </div>
-    </div>
-
-    <!-- Main Content -->
-    <div class="container">
-        <h2>Scope of Workshop</h2>
-        <p>
-            Oceans cover 71% of the Earth's surface, yet much of the underwater domain remains unexplored.
-            Effective surveillance is essential for environmental protection, security, and industrial monitoring.
-            Core objectives include preserving marine ecosystems, monitoring fisheries, detecting aquatic diseases,
-            and preventing illegal activities. Automated systems with advanced imaging and sensors support continuous
-            coastal monitoring by identifying anomalies through audio and video data.
-        </p>
-        <p>
-            Underwater communication has advanced significantly, enabling data exchange between submerged vehicles,
-            sensors, and surface stations. Challenges such as signal attenuation and scattering affect both optical
-            and acoustic data quality. This workshop will explore recent developments in underwater vision, sensor fusion,
-            AI-based analytics, and communication technologies. Topics include deep learning for image enhancement,
-            generative models for data augmentation, autonomous underwater vehicles, and acoustic communication protocols.
-            The workshop aims to connect researchers and industry experts to drive innovation in underwater surveillance.
-        </p>
-<br><br>    <!-- Double line break -->
-<h2>Call for Papers</h2>
-<p>
-  We invite original and high-quality submissions in the domain of underwater surveillance and related technologies. Authors are encouraged to contribute papers that present novel research, practical applications, or insightful reviews. 
-
-<br><br>    <!-- Double line break -->
-
-        
-      <section class="keynote-section">
-  <div class="keynote-title">
-    <h2>Keynote Speakers</h2>
-  </div>
-
-  <div class="keynote-grid">
-
-    <!-- Keynote 1 -->
-    <div class="keynote-card">
-      <div class="keynote-card-inner">
-        <img class="keynote-photo" src="./a-zakharova.jpg" alt="Prof. Anastasia Zakharova">
-
-        <div>
-          <h3>Prof. Anastasia Zakharova, La Rochelle Université, France</h3>
-
-
-          <p><strong>Title:</strong> Graph Neural Networks for MOS in Underwater Environment: An Inductive Approach.</p>
-          <p><strong>Biography:</strong> Prof. Zakharova works in graph based machine learning with a focus on complex environmental data. Her recent work explores inductive graph neural models that can generalize to new sensing nodes without retraining. She applies these methods to underwater monitoring where data is often sparse, noisy, and expensive to collect. Her contributions support real time interpretation of marine observation systems.</p>
+        <!-- Keynote 2 -->
+        <div class="keynote-card">
+          <div class="keynote-card-inner">
+            <img class="keynote-photo" src="./Monika_Aggarwal.jpg" alt="Prof. Monika Aggarwal" />
+            <div>
+              <h3>Prof. Monika Aggarwal, Indian Institute of Technology Delhi, India</h3>
+              <p><strong>Title:</strong> To be shared.</p>
+              <p>
+                <strong>Biography:</strong> Prof. Monika Aggarwal is a faculty member in the Department of Electrical
+                Engineering at the Indian Institute of Technology Delhi. Her research spans statistical signal processing,
+                underwater sensing, and communication systems, with a strong focus on reliable acoustic–optical perception
+                for marine environments. She has led multiple sponsored projects in underwater communication and autonomous
+                systems and has contributed significantly to energy-aware algorithms for long-term marine monitoring. Her
+                work integrates learning-based signal processing with field-deployable sensing platforms, supporting
+                advances in underwater surveillance, environmental intelligence, and next-generation maritime robotics.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Keynote 2 -->
-    <div class="keynote-card">
-      <div class="keynote-card-inner">
-        <img class="keynote-photo" src="./Monika_Aggarwal.jpg" alt="Prof. Monika Aggarwal">
+    <br /><br />
 
-        <div>
-          <h3>Prof. Monika Aggarwal, Indian Institute of Technology Delhi, India</h3>
-          <p><strong>Title:</strong> To be shared.</p>
-          <p><strong>Biography:</strong> Prof. Monika Aggarwal is a faculty member in the Department of Electrical Engineering at the Indian Institute of Technology Delhi. Her research spans statistical signal processing, underwater sensing, and communication systems, with a strong focus on reliable acoustic–optical perception for marine environments. She has led multiple sponsored projects in underwater communication and autonomous systems and has contributed significantly to energy-aware algorithms for long-term marine monitoring. Her work integrates learning-based signal processing with field-deployable sensing platforms, supporting advances in underwater surveillance, environmental intelligence, and next-generation maritime robotics.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-        
-<br><br>        
-        <div class="container">
     <h2>Topics of Interest</h2>
-        <ol>
-            <li><strong>Underwater Imaging and Vision Systems</strong>
-                <ul>
-                    <li>Optical vs. acoustic imaging techniques</li>
-                    <li>Image enhancement and restoration (dehazing, super-resolution, low-light imaging)</li>
-                    <li>Object detection, tracking, and deep learning models (Vision Transformers, generative models)</li>
-                </ul>
-            </li>
+    <ol>
+      <li>
+        <strong>Underwater Imaging and Vision Systems</strong>
+        <ul>
+          <li>Optical vs. acoustic imaging techniques</li>
+          <li>Image enhancement and restoration (dehazing, super-resolution, low-light imaging)</li>
+          <li>Object detection, tracking, and deep learning models (Vision Transformers, generative models)</li>
+        </ul>
+      </li>
 
-            <li><strong>Sensor Fusion for Underwater Perception</strong>
-                <ul>
-                    <li>Multi-modal fusion of optical, sonar, and LiDAR data</li>
-                    <li>AI-based real-time sensor fusion and 3D reconstruction</li>
-                </ul>
-            </li>
+      <li>
+        <strong>Sensor Fusion for Underwater Perception</strong>
+        <ul>
+          <li>Multi-modal fusion of optical, sonar, and LiDAR data</li>
+          <li>AI-based real-time sensor fusion and 3D reconstruction</li>
+        </ul>
+      </li>
 
-            <li><strong>Underwater Communication and Networking</strong>
-                <ul>
-                    <li>Acoustic, optical, and RF communication challenges</li>
-                    <li>AI-driven underwater networking and energy-efficient protocols</li>
-                </ul>
-            </li>
+      <li>
+        <strong>Underwater Communication and Networking</strong>
+        <ul>
+          <li>Acoustic, optical, and RF communication challenges</li>
+          <li>AI-driven underwater networking and energy-efficient protocols</li>
+        </ul>
+      </li>
 
-            <li><strong>Autonomous Underwater Vehicles (AUVs) and Robotics</strong>
-                <ul>
-                    <li>AI-powered navigation, deep reinforcement learning for path planning</li>
-                    <li>Swarm intelligence for multi-robot collaboration</li>
-                </ul>
-            </li>
+      <li>
+        <strong>Autonomous Underwater Vehicles (AUVs) and Robotics</strong>
+        <ul>
+          <li>AI-powered navigation, deep reinforcement learning for path planning</li>
+          <li>Swarm intelligence for multi-robot collaboration</li>
+        </ul>
+      </li>
 
-            <li><strong>Applications of Underwater Surveillance</strong>
-                <ul>
-                    <li>Defense and security: naval threat detection</li>
-                    <li>Environmental monitoring and marine conservation</li>
-                    <li>Industrial inspection: pipelines, offshore structures, and ship hulls</li>
-                </ul>
-            </li>
+      <li>
+        <strong>Applications of Underwater Surveillance</strong>
+        <ul>
+          <li>Defense and security: naval threat detection</li>
+          <li>Environmental monitoring and marine conservation</li>
+          <li>Industrial inspection: pipelines, offshore structures, and ship hulls</li>
+        </ul>
+      </li>
 
-            <li><strong>Challenges and Future Directions</strong>
-                <ul>
-                    <li>Domain adaptation for underwater AI models</li>
-                    <li>Data annotation and real-time processing constraints</li>
-                    <li>Emerging trends: quantum sensing, bio-inspired robotics, adaptive vision</li>
-                </ul>
-            </li>
-        </ol>
-    </div>
-
+      <li>
+        <strong>Challenges and Future Directions</strong>
+        <ul>
+          <li>Domain adaptation for underwater AI models</li>
+          <li>Data annotation and real-time processing constraints</li>
+          <li>Emerging trends: quantum sensing, bio-inspired robotics, adaptive vision</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
 </body>
 </html>
