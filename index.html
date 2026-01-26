@@ -147,6 +147,30 @@
         strong {
             color: #0a4d5e;
         }
+        .logo-strip{
+  width: 100%;
+  background: #fff;
+  padding: 12px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.logo-strip .logo-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-strip img{
+  height: 70px;          /* controls the strip nicely */
+  width: auto;           /* keeps correct aspect */
+  max-width: 100%;       /* responsive */
+  object-fit: contain;   /* important: no cropping */
+  display: block;
+}
+
         /* Keynote section (improved card style) */
 .keynote-section {
     margin: 30px 0 10px;
@@ -260,7 +284,9 @@
 
 <!-- Logo Strip -->
 <div class="logo-strip">
-    <img src="logo_strip_updated_icpr.png" alt="Sponsors and Partners Logos"  style="width: 80%; max-height: 80px;" object-fit: cover; display: block;">
+  <div class="logo-wrap">
+    <img src="logo_strip_updated_icpr.png" alt="Sponsors and Partners Logos">
+  </div>
 </div>
 
 
