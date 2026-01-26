@@ -1,288 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <base href=".">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conference Template">
-    <meta name="resource-type" content="document">
-    <meta name="distribution" content="global">
-    <meta name="keywords" content="Conference">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>AUSTech 2026</title>
+  <meta charset="UTF-8" />
+  <base href="." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conference Template" />
+  <meta name="resource-type" content="document" />
+  <meta name="distribution" content="global" />
+  <meta name="keywords" content="Conference" />
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
+  <title>AUSTech 2026</title>
 
-        .banner {
-            position: relative;
-            width: 100%;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.banner img {
-    width: 100%;
-    height: 250px; /* Adjusted to half size */
-    object-fit: cover;
-    display: block;
-}
+    body {
+      font-family: "Roboto", sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        .top-left {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 20px 30px;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 90%;
-        }
+    /* Banner */
+    .banner {
+      position: relative;
+      width: 100%;
+      overflow: hidden; /* prevents overlay spilling on mobile */
+      background: #000;
+    }
 
-        .top-left .title1 {
-            font-size: 22px;
-            font-weight: 700;
-        }
+    .banner img {
+      width: 100%;
+      height: clamp(260px, 45vw, 420px); /* responsive height */
+      object-fit: cover;
+      display: block;
+    }
 
-        .bottom-right {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            font-size: 14px;
-            padding: 10px 15px;
-            border-radius: 8px;
-        }
-                /* Logo Strip */
-        .logo-strip {
-            width: 100%;
-            background-color: #fff;
-            text-align: center;
-            padding: 12px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    .top-left {
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 16px 18px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: min(92%, 760px);
+    }
 
-        .logo-strip img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
+    .top-left .title1 {
+      font-size: clamp(16px, 4.5vw, 22px);
+      font-weight: 700;
+      line-height: 1.25;
+    }
 
-        .nav-container {
-            width: 100%;
-            background-color: #0a4d5e;
-            display: flex;
-            justify-content: center;
-        }
+    .bottom-right {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      font-size: clamp(12px, 3.2vw, 14px);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
 
-        .navigation {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            padding: 14px 20px;
-        }
+    @media (max-width: 480px) {
+      .top-left {
+        top: 12px;
+        padding: 12px 14px;
+      }
+    }
 
-        .navigation a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-            padding: 6px 12px;
-            transition: background-color 0.3s ease;
-        }
+    /* Logo Strip (single definition) */
+    .logo-strip {
+      width: 100%;
+      background: #fff;
+      padding: 12px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    }
 
-        .navigation a:hover,
-        .navigation a.current {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-        }
+    .logo-strip .logo-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 40px 20px;
-            background-color: #ffffff;
-        }
+    .logo-strip img {
+      height: 70px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
 
-        h2 {
-            font-size: 24px;
-            color: #0a4d5e;
-            margin-bottom: 15px;
-        }
+    /* Navigation */
+    .nav-container {
+      width: 100%;
+      background-color: #0a4d5e;
+      display: flex;
+      justify-content: center;
+    }
 
-        p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
+    .navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 14px 20px;
+      justify-content: center;
+    }
 
-        ol {
-            padding-left: 20px;
-            margin-bottom: 40px;
-        }
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 6px 12px;
+      transition: background-color 0.3s ease;
+    }
 
-        li {
-            margin-bottom: 10px;
-        }
+    .navigation a:hover,
+    .navigation a.current {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    @media (max-width: 480px) {
+      .navigation {
+        gap: 14px;
+        padding: 12px 12px;
+      }
+      .navigation a {
+        font-size: 16px;
+        padding: 6px 10px;
+      }
+    }
 
-        strong {
-            color: #0a4d5e;
-        }
-             .logo-strip{
-  width: 100%;
-  background: #fff;
-  padding: 12px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-}
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: #ffffff;
+    }
 
-.logo-strip .logo-wrap{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
 
-.logo-strip img{
-  height: 70px;          /* controls the strip nicely */
-  width: auto;           /* keeps correct aspect */
-  max-width: 100%;       /* responsive */
-  object-fit: contain;   /* important: no cropping */
-  display: block;
-}
+    /* Template section */
+    .template-links {
+      text-align: center;
+      margin: 40px auto 0;
+      padding: 20px;
+    }
 
-.submission-note {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 600;
-    color: #003366;
-    margin: 40px auto;
-    padding: 15px 20px;
-    max-width: 800px;
-    background-color: #f0f8ff;
-    border: 1px solid #cce;
-    border-radius: 8px;
-}
+    .template-links h3 {
+      font-size: 24px;
+      color: #003366;
+      margin-bottom: 10px;
+    }
 
-.submission-note a {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .template-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.submission-note a:hover {
-    text-decoration: underline;
-}
-.template-links {
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-}
+    .template-btn {
+      padding: 10px 20px;
+      background-color: #0066cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
 
-.template-links h3 {
-    font-size: 24px;
-    color: #003366;
-    margin-bottom: 10px;
-}
-
-.template-buttons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.template-btn {
-    padding: 10px 20px;
-    background-color: #0066cc;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.template-btn:hover {
-    background-color: #004c99;
-}
-
-        
-    </style>
+    .template-btn:hover {
+      background-color: #004c99;
+    }
+  </style>
 </head>
 
 <body>
-
-    <!-- Banner -->
-    <div class="banner">
-<img src="../underwater.jpg" alt="Conference Template Banner" style="width: 100%; height: 250px; object-fit: cover; display: block;">
-        <div class="top-left">
-            <div class="title1">
-                Advances in Underwater Surveillance: Technologies, Challenges and Future Directions (AUSTech 2026)
-            </div>
-        </div>
-        <div class="bottom-right">
-            ICPR 2026 <br> Lyon, France
-        </div>
+  <!-- Banner -->
+  <div class="banner">
+    <img src="../underwater.jpg" alt="Conference Template Banner" />
+    <div class="top-left">
+      <div class="title1">
+        Advances in Underwater Surveillance: Technologies, Challenges and Future Directions (AUSTech 2026)
+      </div>
     </div>
-
-<!-- Logo Strip -->
-<div class="logo-strip">
-  <div class="logo-wrap">
-    <img src="../logo_strip_updated_icpr.png" alt="Sponsors and Partners Logos">
+    <div class="bottom-right">
+      ICPR 2026 <br />
+      Lyon, France
+    </div>
   </div>
-</div>
 
-    <!-- Navigation -->
-    <div class="nav-container">
-        <div class="navigation">
-                <a title="Conference Home Page" href="..">Home</a>
-            <a href="../Authors">Authors</a>
-            <a href="../organisers">Organisers</a>
-            <a href="../program">Program</a>
-        </div>
+  <!-- Logo Strip -->
+  <div class="logo-strip">
+    <div class="logo-wrap">
+      <img src="../logo_strip_updated_icpr.png" alt="Sponsors and Partners Logos" />
     </div>
+  </div>
 
-    <!-- Main Content -->
+  <!-- Navigation -->
+  <div class="nav-container">
+    <div class="navigation">
+      <a title="Conference Home Page" href="..">Home</a>
+      <a href="../Authors">Authors</a>
+      <a href="../organisers">Organisers</a>
+      <a href="../program">Program</a>
+    </div>
+  </div>
 
-  <br>
-
+  <!-- Main Content -->
+  <div class="container">
     <p>
-        All accepted papers will be published in the proceedings published in the Lecture Notes in Computer Science (LNCS) series. 
-       
+      All accepted papers will be published in the proceedings published in the Lecture Notes in Computer Science (LNCS) series.
     </p>
 
-<div class="template-links">
-    <h3>Paper Submission Templates</h3>
-    <p>Springer LNCS format with maximum 15 pages (including references, figures and tables) during paper submission. Please use the following templates for preparing your manuscript:</p>
-    <div class="template-buttons">
+    <div class="template-links">
+      <h3>Paper Submission Templates</h3>
+      <p>
+        Springer LNCS format with maximum 15 pages (including references, figures and tables) during paper submission.
+        Please use the following templates for preparing your manuscript:
+      </p>
+
+      <div class="template-buttons">
         <a href="../assets/Latex.zip" class="template-btn" download>Download LaTeX Template</a>
         <a href="../assets/word.zip" class="template-btn" download>Download Word Template</a>
+      </div>
     </div>
-</div>
-
-
-
-
+  </div>
 </body>
 </html>
