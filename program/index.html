@@ -194,7 +194,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
-      min-width: 900px;
+      min-width: 520px;
     }
 
     .schedule-table caption {
@@ -205,18 +205,10 @@
       font-size: 18px;
     }
 
-    .schedule-table col.time-col {
-      width: 16%;
-    }
-
-    .schedule-table col.program-col {
-      width: 34%;
-    }
-
     .schedule-table th,
     .schedule-table td {
       border: 1px solid #ccc;
-      padding: 10px 14px;
+      padding: 10px 16px;
       vertical-align: top;
       text-align: left;
     }
@@ -226,31 +218,26 @@
       color: #fff;
     }
 
-    .schedule-table th {
-      font-weight: 700;
-    }
-
-    .schedule-table td:nth-child(1),
-    .schedule-table td:nth-child(3),
-    .schedule-table th:nth-child(1),
-    .schedule-table th:nth-child(3) {
+    .schedule-table th:first-child,
+    .schedule-table td:first-child {
+      width: 190px;
       white-space: nowrap;
     }
 
     .schedule-table strong {
       font-weight: 700;
-      color: #222;
+      color: #111;
     }
 
     @media (max-width: 768px) {
-      .program-section {
-        margin: 20px 12px 30px;
-        padding: 24px 14px 32px;
-      }
-
       .schedule-table th,
       .schedule-table td {
         font-size: 14px;
+      }
+
+      .schedule-table th:first-child,
+      .schedule-table td:first-child {
+        width: 160px;
       }
     }
   </style>
@@ -263,8 +250,7 @@
 
     <div class="top-left">
       <div class="title1">
-        Advances in Underwater Surveillance: Technologies, Challenges and Future Directions
-        (AUSTech 2026)
+        Advances in Underwater Surveillance: Technologies, Challenges and Future Directions (AUSTech 2026)
       </div>
     </div>
 
@@ -312,35 +298,23 @@
 
     <div class="table-wrap">
       <table class="schedule-table" aria-label="Workshop Program">
-        <colgroup>
-          <col class="time-col" />
-          <col class="program-col" />
-          <col class="time-col" />
-          <col class="program-col" />
-        </colgroup>
-
         <thead>
           <tr>
-            <th scope="col">Time</th>
-            <th scope="col">Program</th>
-            <th scope="col">Time</th>
-            <th scope="col">Program</th>
+            <th>Time</th>
+            <th>Program</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
             <td>09:00 – 09:15</td>
-            <td colspan="3">Opening Remarks</td>
+            <td>Opening Remarks</td>
           </tr>
 
           <tr>
             <td>09:15 – 10:00</td>
-            <td colspan="3">
-              <strong>
-                Graph Neural Networks for MOS in Underwater Environment:
-                An Inductive Approach
-              </strong>
+            <td>
+              <strong>Graph Neural Networks for MOS in Underwater Environment: An Inductive Approach</strong>
               <br />
               Invited Talk 1
               <br />
@@ -351,27 +325,27 @@
           <tr>
             <td>10:00 – 10:15</td>
             <td>
-              A Closed-Loop Agentic Framework for Marine Litter Monitoring:
-              Data Synthesis, Augmentation, and Performance-Guided Optimization
+              A Closed-Loop Agentic Framework for Marine Litter Monitoring: Data Synthesis,
+              Augmentation, and Performance-Guided Optimization
             </td>
+          </tr>
+
+          <tr>
             <td>10:15 – 10:30</td>
             <td>
-              From Masks to Images: Mask-Conditional Diffusion for Realistic
-              Synthetic SSS Data
+              From Masks to Images: Mask-Conditional Diffusion for Realistic Synthetic SSS Data
             </td>
           </tr>
 
           <tr>
             <td>10:30 – 10:45</td>
-            <td colspan="3">Tea Break</td>
+            <td>Tea Break</td>
           </tr>
 
           <tr>
             <td>10:45 – 11:30</td>
-            <td colspan="3">
-              <strong>
-                Underwater Acoustic Communication: Challenges and Intelligent Solutions
-              </strong>
+            <td>
+              <strong>Underwater Acoustic Communication: Challenges and Intelligent Solutions</strong>
               <br />
               Invited Talk 2
               <br />
@@ -382,19 +356,21 @@
           <tr>
             <td>11:30 – 11:45</td>
             <td>
-              A Hybrid Framework for Automated Coral Reef Risk Assessment by
-              Zero-Shot Visual Perception and Fuzzy Cognitive Map Inference
+              A Hybrid Framework for Automated Coral Reef Risk Assessment by Zero-Shot Visual
+              Perception and Fuzzy Cognitive Map Inference
             </td>
+          </tr>
+
+          <tr>
             <td>11:45 – 12:00</td>
             <td>
-              DIVE-Net: Depthwise Multi-Dilation Vision Network for Efficient
-              Underwater Image Enhancement
+              DIVE-Net: Depthwise Multi-Dilation Vision Network for Efficient Underwater Image Enhancement
             </td>
           </tr>
 
           <tr>
             <td>12:00 – 12:15</td>
-            <td colspan="3">Closing Remarks</td>
+            <td>Closing Remarks</td>
           </tr>
         </tbody>
       </table>
