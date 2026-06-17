@@ -20,7 +20,11 @@
   <title>AUSTech 2026</title>
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: "Roboto", sans-serif;
@@ -29,17 +33,17 @@
       line-height: 1.6;
     }
 
-    /* Banner (mobile-safe) */
+    /* Banner */
     .banner {
       position: relative;
       width: 100%;
-      overflow: hidden; /* prevents overlay spilling on mobile */
+      overflow: hidden;
       background: #000;
     }
 
     .banner img {
       width: 100%;
-      height: clamp(260px, 45vw, 420px); /* responsive height */
+      height: clamp(260px, 45vw, 420px);
       object-fit: cover;
       display: block;
     }
@@ -75,7 +79,10 @@
     }
 
     @media (max-width: 480px) {
-      .top-left { top: 12px; padding: 12px 14px; }
+      .top-left {
+        top: 12px;
+        padding: 12px 14px;
+      }
     }
 
     /* Logo strip */
@@ -83,7 +90,7 @@
       width: 100%;
       background: #fff;
       padding: 12px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
     }
 
     .logo-strip .logo-wrap {
@@ -135,8 +142,15 @@
     }
 
     @media (max-width: 480px) {
-      .navigation { gap: 14px; padding: 12px 12px; }
-      .navigation a { font-size: 16px; padding: 6px 10px; }
+      .navigation {
+        gap: 14px;
+        padding: 12px 12px;
+      }
+
+      .navigation a {
+        font-size: 16px;
+        padding: 6px 10px;
+      }
     }
 
     /* Program section */
@@ -146,7 +160,7 @@
       background: #fff;
       padding: 30px 20px 40px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
 
     .program-section h2 {
@@ -155,9 +169,24 @@
       margin-bottom: 15px;
     }
 
+    .program-details {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .program-details a {
+      color: #0a4d5e;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .program-details a:hover {
+      text-decoration: underline;
+    }
+
     /* Table */
     .table-wrap {
-      overflow-x: auto;   /* mobile safety */
+      overflow-x: auto;
       -webkit-overflow-scrolling: touch;
     }
 
@@ -165,7 +194,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
-      min-width: 520px;  /* enables clean horizontal scroll only if needed */
+      min-width: 900px;
     }
 
     .schedule-table caption {
@@ -176,10 +205,18 @@
       font-size: 18px;
     }
 
+    .schedule-table col.time-col {
+      width: 16%;
+    }
+
+    .schedule-table col.program-col {
+      width: 34%;
+    }
+
     .schedule-table th,
     .schedule-table td {
       border: 1px solid #ccc;
-      padding: 10px 10px;
+      padding: 10px 14px;
       vertical-align: top;
       text-align: left;
     }
@@ -189,10 +226,32 @@
       color: #fff;
     }
 
-    /* On small screens: keep it readable */
+    .schedule-table th {
+      font-weight: 700;
+    }
+
+    .schedule-table td:nth-child(1),
+    .schedule-table td:nth-child(3),
+    .schedule-table th:nth-child(1),
+    .schedule-table th:nth-child(3) {
+      white-space: nowrap;
+    }
+
+    .schedule-table strong {
+      font-weight: 700;
+      color: #222;
+    }
+
     @media (max-width: 768px) {
+      .program-section {
+        margin: 20px 12px 30px;
+        padding: 24px 14px 32px;
+      }
+
       .schedule-table th,
-      .schedule-table td { font-size: 14px; }
+      .schedule-table td {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -201,13 +260,17 @@
   <!-- Banner -->
   <div class="banner">
     <img src="../underwater.jpg" alt="Conference Template Banner" />
+
     <div class="top-left">
       <div class="title1">
-        Advances in Underwater Surveillance: Technologies, Challenges and Future Directions (AUSTech 2026)
+        Advances in Underwater Surveillance: Technologies, Challenges and Future Directions
+        (AUSTech 2026)
       </div>
     </div>
+
     <div class="bottom-right">
-      ICPR 2026 <br /> Lyon, France
+      ICPR 2026 <br />
+      Lyon, France
     </div>
   </div>
 
@@ -228,85 +291,114 @@
     </div>
   </div>
 
-<!-- Program Section -->
-<section class="program-section" id="program">
-  <h2>Program</h2>
+  <!-- Program Section -->
+  <section class="program-section" id="program">
+    <h2>Program</h2>
 
-  <div class="program-details">
-    <p>
-      <strong>Date:</strong> 22 August 2026<br>
-      <strong>Time:</strong> 09:00 – 12:15<br>
-      <strong>Venue:</strong>
-      <a href="https://www.google.com/maps/place/Louis+N%C3%A9el+INSA+Lyon/@45.783714,4.882288,18z/data=!4m6!3m5!1s0x47f4c01919d8e717:0x16a68d58a810799b!8m2!3d45.7838102!4d4.8827899!16s%2Fg%2F11c2lsmg9j?hl=fr-FR&entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-        Louis Néel, INSA Lyon
-      </a>
-    </p>
-  </div>
+    <div class="program-details">
+      <p>
+        <strong>Date:</strong> 22 August 2026<br />
+        <strong>Time:</strong> 09:00 – 12:15<br />
+        <strong>Venue:</strong>
+        <a
+          href="https://www.google.com/maps/place/Louis+N%C3%A9el+INSA+Lyon/@45.783714,4.882288,18z/data=!4m6!3m5!1s0x47f4c01919d8e717:0x16a68d58a810799b!8m2!3d45.7838102!4d4.8827899!16s%2Fg%2F11c2lsmg9j?hl=fr-FR&entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Louis Néel, INSA Lyon
+        </a>
+      </p>
+    </div>
 
-  <div class="table-wrap">
-    <table class="schedule-table" aria-label="Workshop Program">
-      <thead>
-        <tr>
-          <th style="width: 180px;">Time</th>
-          <th>Program</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>09:00 – 09:15</td>
-          <td>Opening Remarks</td>
-        </tr>
+    <div class="table-wrap">
+      <table class="schedule-table" aria-label="Workshop Program">
+        <colgroup>
+          <col class="time-col" />
+          <col class="program-col" />
+          <col class="time-col" />
+          <col class="program-col" />
+        </colgroup>
 
-        <tr>
-          <td>09:15 – 10:00</td>
-          <td>
-            <strong>Graph Neural Networks for MOS in Underwater Environment: An Inductive Approach</strong>
-            <br>
-            Invited Talk 1
-            <br>
-            Prof. Anastasia Zakharova, La Rochelle Université, France
-          </td>
-        </tr>
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Program</th>
+            <th scope="col">Time</th>
+            <th scope="col">Program</th>
+          </tr>
+        </thead>
 
-        <tr>
-          <td>10:00 – 10:15</td>
-          <td>A Closed-Loop Agentic Framework for Marine Litter Monitoring: Data Synthesis, Augmentation, and Performance-Guided Optimization</td>
-          <td>10:15 – 10:30</td>
-          <td>From Masks to Images: Mask‑Conditional Diffusion for Realistic Synthetic SSS Data</td>
-        </tr>
-        <tr>
-          <td>10:30 – 10:45</td>
-          <td>Tea Break</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>09:00 – 09:15</td>
+            <td colspan="3">Opening Remarks</td>
+          </tr>
 
-        <tr>
-          <td>10:45 – 11:30</td>
-          <td>
-              <strong>Underwater Acoustic Communication: Challenges and Intelligent Solutions</strong>
-            <br>
-            Invited Talk 2
-            <br>
-            Prof. Monika Aggarwal, Indian Institute of Technology Delhi, India
-          </td>
-        </tr>
+          <tr>
+            <td>09:15 – 10:00</td>
+            <td colspan="3">
+              <strong>
+                Graph Neural Networks for MOS in Underwater Environment:
+                An Inductive Approach
+              </strong>
+              <br />
+              Invited Talk 1
+              <br />
+              Prof. Anastasia Zakharova, La Rochelle Université, France
+            </td>
+          </tr>
 
-        <tr>
-          <td>11:30 – 11:45</td>
-          <td>A Hybrid Framework for Automated Coral Reef Risk Assessment by Zero-Shot Visual Perception and Fuzzy Cognitive Map Inference</td>
-          <td>11:45 – 12:00</td>
-          <td>DIVE-Net: Depthwise Multi-Dilation Vision Network for Efficient Underwater Image Enhancement</td>
-        </tr>
+          <tr>
+            <td>10:00 – 10:15</td>
+            <td>
+              A Closed-Loop Agentic Framework for Marine Litter Monitoring:
+              Data Synthesis, Augmentation, and Performance-Guided Optimization
+            </td>
+            <td>10:15 – 10:30</td>
+            <td>
+              From Masks to Images: Mask-Conditional Diffusion for Realistic
+              Synthetic SSS Data
+            </td>
+          </tr>
 
-        <tr>
-          <td>12:00 – 12:15</td>
-          <td>Closing Remarks</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+          <tr>
+            <td>10:30 – 10:45</td>
+            <td colspan="3">Tea Break</td>
+          </tr>
 
+          <tr>
+            <td>10:45 – 11:30</td>
+            <td colspan="3">
+              <strong>
+                Underwater Acoustic Communication: Challenges and Intelligent Solutions
+              </strong>
+              <br />
+              Invited Talk 2
+              <br />
+              Prof. Monika Aggarwal, Indian Institute of Technology Delhi, India
+            </td>
+          </tr>
 
+          <tr>
+            <td>11:30 – 11:45</td>
+            <td>
+              A Hybrid Framework for Automated Coral Reef Risk Assessment by
+              Zero-Shot Visual Perception and Fuzzy Cognitive Map Inference
+            </td>
+            <td>11:45 – 12:00</td>
+            <td>
+              DIVE-Net: Depthwise Multi-Dilation Vision Network for Efficient
+              Underwater Image Enhancement
+            </td>
+          </tr>
 
+          <tr>
+            <td>12:00 – 12:15</td>
+            <td colspan="3">Closing Remarks</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 </body>
 </html>
